@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+MONGODB_DATA_DIR=$MONGODB_HOME/data
+
+rm -rf $MONGODB_DATA_DIR
+mkdir -p $MONGODB_DATA_DIR
+
+$MONGODB_HOME/bin/mongod --dbpath $MONGODB_DATA_DIR --httpinterface --rest
